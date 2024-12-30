@@ -1,21 +1,17 @@
 package hft.matthew.SpringBoot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Person {
+@Scope("prototype")
+public class PrototypeObj {
 	
 	int age;
 	
-	public Person() {
-		System.out.println("Person object created");
+	public PrototypeObj() {
+		System.out.println("Prototype object created");
 	}
 
-	@Autowired
-	Laptop lap;
-	
-	public void code() {
-		lap.compile();
-	}
 }
