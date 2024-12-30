@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
 	
-	int age;
+	private int age;
 	
 	public Person() {
 		System.out.println("Person object created");
@@ -18,4 +18,14 @@ public class Person {
 	public void code() {
 		lap.compile();
 	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
 }
